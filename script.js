@@ -27,3 +27,35 @@ for(let i = 1; i < result1.length; i++) {
 }
 
 console.log(result2);
+
+// Part 4: Sorting and Manipulating Data
+
+let result3 = result2.slice(); // create a copy of result 2.
+
+// Insert an object at index 1:
+
+result3.splice(1, 0, { ID: "48", Name: "Barry", Occupation: "Runner", Age: "25" });
+
+console.log('After inserting the required object:');
+console.log(result3);
+
+// Add an object to the end of the array:
+
+result3.push({ ID: "7", Name: "Bilbo", Occupation: "None", Age: "111" });
+
+console.log('After adding the required object to the end of the array:');
+console.log(result3);
+
+// Calculate the average age of the group
+
+let totAge = 0;
+let avgAge = 0;
+let numPeople = result3.length;
+
+result3.forEach((person) => {
+    totAge += parseInt(person.Age);
+});
+
+avgAge = parseInt(totAge / numPeople);
+console.log(`The average age of the group is ${avgAge}.`);
+
