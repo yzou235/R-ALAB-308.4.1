@@ -59,3 +59,35 @@ result3.forEach((person) => {
 avgAge = parseInt(totAge / numPeople);
 console.log(`The average age of the group is ${avgAge}.`);
 
+// Part 5: Full Circle
+
+// step 1: transfer result3 to a 2D array.
+
+let backToArray = [];
+
+let keysArray = Object.keys(result3[0]);
+console.log(keysArray);
+
+backToArray.push(keysArray);
+console.log(backToArray);
+
+for (i = 1; i < result3.length; i++) {
+    backToArray.push(Object.values(result3[i]));
+}
+console.log(backToArray);
+
+// step 2: convert each person from array to a string
+
+let rowStringArray = [];
+
+for (i = 0; i < backToArray.length; i++) {
+    rowStringArray[i] = backToArray[i].join(',');
+}
+
+console.log(rowStringArray)
+
+// step 3: convert to a CSV string
+
+result4 = rowStringArray.join('\\n'); //escape the backslash
+console.log(result4);
+
