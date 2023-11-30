@@ -61,7 +61,7 @@ console.log(`The average age of the group is ${avgAge}.`);
 
 // Part 5: Full Circle
 
-// step 1: transfer result3 to a 2D array.
+// step 1: convert result3 to a 2D array.
 
 let backToArray = [];
 
